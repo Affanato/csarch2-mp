@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>IEEE-754 binary-32 floating point addition</h1>
+    <form action="/" method="POST">
+        <fieldset id="operands">
+            <div class="input-1">
+                <input name="input-1-operand" />
+                X 2^
+                <input type="number" name="input-1-base" />
+            </div>
+            <span>+</span>
+            <div class="input-2">
+                <input name="input-2-operand" />
+                X 2^
+                <input type="number" name="input-2-base" />
+            </div>
+        </fieldset>
+        <fieldset id="rounding">
+            <div>
+                Choice of Rounding
+            </div>
+            <div>
+                <input type="radio" value="G/R/S" name="round">
+                <label>G/R/S</label>
+            </div>
+            <div>
+                <input type="radio" value="Standard" name="round">
+                <label>Standard</label>
+            </div>
+            <label>Supported Digits: </label>
+            <input type="number" name="supported-digits" />
+        </fieldset>
+        <input type="submit" value="Add">
+    </form>
+</body>
+
+</html>
