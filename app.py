@@ -8,7 +8,7 @@ calculator = Calculator()
 def hello_world():
     if request.method == 'GET':
         return render_template('index.html')
-    else:
+    elif request.method == 'POST':
         ## Get form data
         op1 = request.form['input-1-operand']
         b1 = request.form['input-1-base']
