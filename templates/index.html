@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="static/js/script.js"></script>
 </head>
 
 <body>
@@ -12,15 +13,17 @@
     <form action="/" method="POST">
         <fieldset id="operands">
             <div class="input-1">
-                <input name="input-1-operand" />
+                <input name="input-1-operand" id="op1" title="(+/-)1.e " value="1." pattern='^-?1+(\.[01]+)?$'
+                    maxlength="34" onpaste="return false" autocomplete="off" required />
                 X 2^
-                <input type="number" name="input-1-base" />
+                <input type="number" name="input-1-base" min="-126" max="127" value="0" required />
             </div>
             <span>+</span>
             <div class="input-2">
-                <input name="input-2-operand" />
+                <input name="input-2-operand" id="op2" title="(+/-)1.e " value="1." pattern='^-?1+(\.[01]+)?$'
+                    maxlength="34" onpaste="return false" autocomplete="off" required />
                 X 2^
-                <input type="number" name="input-2-base" />
+                <input type="number" name="input-2-base" min="-126" max="127" value="0" required />
             </div>
         </fieldset>
         <fieldset id="rounding">
@@ -28,7 +31,7 @@
                 Choice of Rounding
             </div>
             <div>
-                <input type="radio" value="G/R/S" name="round">
+                <input type="radio" value="G/R/S" name="round" checked>
                 <label>G/R/S</label>
             </div>
             <div>
@@ -36,10 +39,25 @@
                 <label>Standard</label>
             </div>
             <label>Supported Digits: </label>
-            <input type="number" name="supported-digits" />
+            <input type="number" name="supported-digits" min="0" value="0" required />
         </fieldset>
-        <input type="submit" value="Add">
+        <input type="submit" value="Add" id="submit">
     </form>
+    <div id="error">
+        There has been an error.
+    </div>
+    <div id="solution">
+        <div class="solution-inner">
+            <ul>
+                <li>Initial normalization</li>
+                <li>operation</li>
+                <li>post-operation normalization</li>
+                <li>final answer</li>
+            </ul>
+
+        </div>
+        <button>Save as txt file</button>
+    </div>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ calculator = Calculator()
 def hello_world():
     if request.method == 'GET':
         return render_template('index.html')
-    else:
+    elif request.method == 'POST':
         ## Get form data
         op1 = request.form['input-1-operand']
         b1 = request.form['input-1-base']
@@ -17,8 +17,15 @@ def hello_world():
         rounding = request.form['round']
         digits = request.form['supported-digits']
 
+        op1 = str(op1)
+        b1 = int(b1)
+        op2 = str(op2)
+        b2 = int(b2)
+        digits = int(digits)
+
         ## Process
         solutions = calculator.solve(op1, b1, op2, b2, rounding, digits)
 
         ## Output to user
+        ## Once
         return render_template('solution.html', solutions=solutions)
