@@ -8,73 +8,12 @@
 </head>
 
 <body>
-    <div id="solution-inner">
-        {{solutions}}
-        <ul>
-            <li>Initial normalization</li>
-            <li>operation</li>
-            <li>post-operation normalization</li>
-            <li>final answer</li>
-        </ul>
 
-    </div>
-
-    <button href="#" onClick="saveFile()">Save as txt file</button>
-    <script>
-        // https://stackoverflow.com/questions/65050679/javascript-a-simple-way-to-save-a-text-file
-        function download(filename, text) {
-            var element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-
-            element.style.display = 'none';
-            document.body.appendChild(element);
-
-            element.click();
-
-            document.body.removeChild(element);
-        }
-
-        // Start file download.
-        // document.getElementById("dwn-btn").addEventListener("click", () => {
-        //     // Generate download of hello.txt file with some content
-        //     let solutionClass = document.getElementById('solution-inner')
-        //     // https://stackoverflow.com/questions/9727111/innerhtml-without-the-html-just-text
-        //     let text = solutionClass.innerText || solutionClass.textContent;
-        //     let filename = "solution.txt";
-
-        //     download(filename, text);
-        // }, false);
-
-        // https://stackoverflow.com/questions/69759705/html5-javascript-save-as-dialog-for-file-download
-        async function saveFile() {
-            let solutionClass = document.getElementById('solution-inner')
-            // https://stackoverflow.com/questions/9727111/innerhtml-without-the-html-just-text
-            let text = (solutionClass.innerText || solutionClass.textContent);
-            var myblob = new Blob([text], {
-                type: 'text/plain'
-            });
-
-            if (window.showSaveFilePicker) {
-                const opts = {
-                    types: [{
-                        description: 'MYfile',
-                        accept: { 'text/plain': ['.txt'] },
-                    }],
-                    suggestedName: 'myFileText',
-                };
-                var handle = await showSaveFilePicker(opts);
-                var writable = await handle.createWritable();
-                await writable.write(myblob);
-                writable.close();
-            } else {
-                alert("xxx");
-            }
-        }
-    </script>
-
+    {{solutions}}
+    a.) Step-by-step operation (i.e., 1. Initial normalization 2.) operation 3.) post-
+    operation normalization 4.) final answer; (b.) Option to output in a text file
     <a href="/">Try Again</a>
-
+    <a>Save</a>
 </body>
 
 </html>

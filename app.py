@@ -21,7 +21,6 @@ def hello_world():
         b1 = int(b1)
         op2 = str(op2)
         b2 = int(b2)
-        rounding = int(rounding)
         digits = int(digits)
 
         ## Process
