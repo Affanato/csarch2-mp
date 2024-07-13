@@ -17,8 +17,16 @@ def hello_world():
         rounding = request.form['round']
         digits = request.form['supported-digits']
 
+        op1 = str(op1)
+        b1 = int(b1)
+        op2 = str(op2)
+        b2 = int(b2)
+        rounding = int(rounding)
+        digits = int(digits)
+
         ## Process
         solutions = calculator.solve(op1, b1, op2, b2, rounding, digits)
 
         ## Output to user
+        ## Once
         return render_template('solution.html', solutions=solutions)
