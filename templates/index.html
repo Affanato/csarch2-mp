@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <title>IEEE-754 binary-32 floating point operation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>IEEE-754 binary-32 floating point addition</h1>
-    <form action="/" method="POST">
-        <fieldset id="operands">
-            <div class="input-1">
-                <input name="input-1-operand" id="op1" title="(+/-)1.e " value="1." pattern='^-?1+(\.[01]+)?$'
-                    maxlength="34" onpaste="return false" autocomplete="off" required />
-                X 2^
-                <input type="number" name="input-1-base" min="-126" max="127" value="0" required />
+    <div class="container">
+        <h1>IEEE-754 binary-32 floating point operation</h1>
+        <div class="panel left-panel">
+            <div class="content">
+                <div class="operand">
+                    <label for="operand1">Operand 1:</label>
+                    <div class="inline-inputs">
+                        <input type="text" id="operand1" placeholder="X" required>
+                        <label for="exp1">2^</label>
+                        <input type="number" id="exp1" required>
+                    </div>
+                </div>
+                <div class="operand">
+                    <label for="operand2">Operand 2:</label>
+                    <div class="inline-inputs">
+                        <input type="text" id="operand2" placeholder="X" required>
+                        <label for="exp2">2^</label>
+                        <input type="number" id="exp2" required>
+                    </div>
+                </div>
+                <div class="rounding">
+                    <label>Rounding:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="grs" name="rounding" checked>
+                        <label for="grs">G/R/S</label>
+                        <input type="radio" id="standard" name="rounding">
+                        <label for="standard">Standard</label>
+                    </div>
+                </div>
+                <div class="digits">
+                    <label for="digits">Number of digits supported:</label>
+                    <input type="number" id="digits" min="0" required>
+                </div>
+                <div class="go-button">
+                    <button id="go-button">Go</button>
+                </div>
             </div>
-            <span>+</span>
-            <div class="input-2">
-                <input name="input-2-operand" id="op2" title="(+/-)1.e " value="1." pattern='^-?1+(\.[01]+)?$'
-                    maxlength="34" onpaste="return false" autocomplete="off" required />
-                X 2^
-                <input type="number" name="input-2-base" min="-126" max="127" value="0" required />
-            </div>
-        </fieldset>
-        <fieldset id="rounding">
-            <div>
-                Choice of Rounding
-            </div>
-            <div>
-                <input type="radio" value="G/R/S" name="round" checked>
-                <label>G/R/S</label>
-            </div>
-            <div>
-                <input type="radio" value="Standard" name="round">
-                <label>Standard</label>
-            </div>
-            <label>Supported Digits: </label>
-            <input type="number" name="supported-digits" min="0" value="0" required />
-        </fieldset>
-        <input type="submit" value="Add" id="submit">
-    </form>
-    <div id="error">
-        There has been an error.
-    </div>
-    <div id="solution">
-        <div class="solution-inner">
-            <ul>
-                <li>Initial normalization</li>
-                <li>operation</li>
-                <li>post-operation normalization</li>
-                <li>final answer</li>
-            </ul>
-
         </div>
-        <button>Save as txt file</button>
+        <div class="panel right-panel">
+            <div class="step">
+                <h2>1. Initial Normalization</h2>
+                <p>...</p>
+            </div>
+            <div class="step">
+                <h2>2. Operation</h2>
+                <p>...</p>
+            </div>
+            <div class="step">
+                <h2>3. Post-Operation Normalization</h2>
+                <p>...</p>
+            </div>
+            <div class="step">
+                <h2>4. Final Answer</h2>
+                <p>...</p>
+            </div>
+            <div class="save-option">
+                <input type="checkbox" id="save-as-txt">
+                <label for="save-as-txt">Save as txt file</label>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
