@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.panel {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.left-panel {
+    background-color: #bbdefb;
+}
+
+.right-panel {
+    background-color: #ffccbc;
+}
+
+.operand, .rounding, .digits {
+    margin-bottom: 20px;
+}
+
+.inline-inputs {
+    display: flex;
+    align-items: center;
+}
+
+.inline-inputs input {
+    margin-right: 10px;
+}
+
+.operand label, .rounding label, .digits label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.operand input, .digits input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step p {
+    margin: 0 0 10px 20px;
+    color: #666;
+}
+
+.save-option {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.save-option input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.go-button button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.go-button button:hover {
+    background-color: #45a049;
+}
