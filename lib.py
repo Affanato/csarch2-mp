@@ -18,7 +18,7 @@ class Calculator:
         base_two = b2
 
         # Get rounding method
-        rounding_method = 1 if rounding == "G/R/S" else 2
+        rounding_method = "1" if rounding == "G/R/S" else "2"
 
         digit_limit = digits
 
@@ -67,8 +67,17 @@ class Calculator:
             print(str(final_rounded) + " x 2 ^ " + str(final_base))
             
             return {
-                normalized_input_one, normalized_base_one, normalized_input_two, normalized_base_two,
-                GRS_value_one, normalized_base_one, GRS_value_two, normalized_base_two, final_value, final_base, final_rounded
+                "normalized_input_one": normalized_input_one, 
+                "normalized_base_one": normalized_base_one, 
+                "normalized_input_two": normalized_input_two, 
+                "normalized_base_two": normalized_base_two,
+                "GRS_value_one": GRS_value_one, 
+                "normalized_base_one": normalized_base_one, 
+                "GRS_value_two": GRS_value_two, 
+                "normalized_base_two": normalized_base_two, 
+                "final_value": final_value, 
+                "final_base": final_base, 
+                "final_rounded": final_rounded
             }
         else:
             value_input_one = binary_to_decimal(normalized_input_one)
@@ -89,18 +98,19 @@ class Calculator:
             print(str(final_rounded) + " x 2 ^ " + str(final_base))
 
             return {
-                normalized_input_one, normalized_base_one, normalized_input_two, normalized_base_two,
-                value_sum, normalized_base_one, final_rounded, final_base
+                "normalized_input_one": normalized_input_one, 
+                "normalized_base_one": normalized_base_one, 
+                "normalized_input_two": normalized_input_two, 
+                "normalized_base_two": normalized_base_two,
+                "value_sum": value_sum, 
+                "normalized_base_one": normalized_base_one, 
+                "final_rounded": final_rounded, 
+                "final_base": final_base
             }
-
 
     def __init__(self):
         getcontext().prec = 50
         pass
-
-
-
-
 
 def check_binary_digits(number):
     num_str = str(number)

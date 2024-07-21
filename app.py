@@ -5,7 +5,7 @@ app = Flask(__name__)
 calculator = Calculator()
 
 @app.route("/", methods=['GET', 'POST'])
-def hello_world():
+def index():
     if request.method == 'GET':
         return render_template('index.html')
     elif request.method == 'POST':
