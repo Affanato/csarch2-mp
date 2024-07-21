@@ -1,19 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block body %}
 
-<body>
+<div class="panel right-panel">
+    <h2>print statements from nio's code</h2>
 
-    {{solutions}}
-    a.) Step-by-step operation (i.e., 1. Initial normalization 2.) operation 3.) post-
-    operation normalization 4.) final answer; (b.) Option to output in a text file
-    <a href="/">Try Again</a>
-    <a>Save</a>
-</body>
+    Normalized Exponents<br>
+    Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}"<br>
+    Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}"<br>
 
-</html>
+    {% if solution['rounding_method'] == 'G/R/S' %}
+
+    Perform Addition with respect to G/R/S<br>
+    {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}<br>
+    {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}<br>
+    Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}<br>
+
+    Perform Addition<br>
+    {{solution['value_sum']}} x 2 ^ {{solution['normalized_base_one']}}<br>
+    Rounded Final Answer<br>
+    {{solution['final_rounded']}} + " x 2 ^ " + {{solution['final_base']}}<br>
+
+    {% else %}
+
+    Perform Addition<br>
+    {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}<br>
+    + {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}<br>
+    Sum: {{solution['value_sum']}}x 2 ^ {{solution['normalized_base_one']}}<br>
+    Rounded Final Answer<br>
+    {{solution['final_rounded']}} + " x 2 ^ " + {{solution['final_base']}}<br>
+
+    {% endif %}
+
+    <h2>og contents</h2>
+    <div class="step">
+        <h2>1. Initial Normalization</h2>
+        <p>...</p>
+    </div>
+    <div class="step">
+        <h2>2. Operation</h2>
+        <p>...</p>
+    </div>
+    <div class="step">
+        <h2>3. Post-Operation Normalization</h2>
+        <p>...</p>
+    </div>
+    <div class="step">
+        <h2>4. Final Answer</h2>
+        <p>...</p>
+    </div>
+    <div class="solution-buttons">
+        <div class="go-button">
+            <button id="go-button">Save as Txt</button>
+        </div>
+        <form action="/" method="get">
+            <button id="retry-button" type="submit">Try Again</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

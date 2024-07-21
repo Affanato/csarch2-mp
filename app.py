@@ -5,7 +5,7 @@ app = Flask(__name__)
 calculator = Calculator()
 
 @app.route("/", methods=['GET', 'POST'])
-def hello_world():
+def index():
     if request.method == 'GET':
         return render_template('index.html')
     elif request.method == 'POST':
@@ -24,8 +24,8 @@ def hello_world():
         digits = int(digits)
 
         ## Process
-        solutions = calculator.solve(op1, b1, op2, b2, rounding, digits)
+        solution = calculator.solve(op1, b1, op2, b2, rounding, digits)
 
         ## Output to user
         ## Once
-        return render_template('solution.html', solutions=solutions)
+        return render_template('solution.html', solution=solution)
