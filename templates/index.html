@@ -12,40 +12,42 @@
     <div class="container">
         <h1>IEEE-754 binary-32 floating point operation</h1>
         <div class="panel left-panel">
-            <div class="content">
-                <div class="operand">
-                    <label for="operand1">Operand 1:</label>
-                    <div class="inline-inputs">
-                        <input type="text" id="operand1" placeholder="X" required>
-                        <label for="exp1">2^</label>
-                        <input type="number" id="exp1" required>
+            <form action="/" method="post">
+                <div class="content">
+                    <div class="operand">
+                        <label for="operand1">Operand 1:</label>
+                        <div class="inline-inputs">
+                            <input name="input-1-operand" type="text" id="operand1" placeholder="X" required>
+                            <label for="exp1">2^</label>
+                            <input name="input-1-base" type="number" id="exp1" required>
+                        </div>
+                    </div>
+                    <div class="operand">
+                        <label for="operand2">Operand 2:</label>
+                        <div class="inline-inputs">
+                            <input name="input-2-operand" type="text" id="operand2" placeholder="X" required>
+                            <label for="exp2">2^</label>
+                            <input name="input-2-base" type="number" id="exp2" required>
+                        </div>
+                    </div>
+                    <div class="rounding">
+                        <label>Rounding:</label>
+                        <div class="radio-group">
+                            <input type="radio" name="round" value="G/R/S" id="grs" checked>
+                            <label for="grs">G/R/S</label>
+                            <input type="radio" name="round" value="Standard" id="standard">
+                            <label for="standard">Standard</label>
+                        </div>
+                    </div>
+                    <div class="digits">
+                        <label for="digits">Number of digits supported:</label>
+                        <input type="number" name="supported-digits" id="digits" min="0" required>
+                    </div>
+                    <div class="go-button">
+                        <button id="go-button">Go</button>
                     </div>
                 </div>
-                <div class="operand">
-                    <label for="operand2">Operand 2:</label>
-                    <div class="inline-inputs">
-                        <input type="text" id="operand2" placeholder="X" required>
-                        <label for="exp2">2^</label>
-                        <input type="number" id="exp2" required>
-                    </div>
-                </div>
-                <div class="rounding">
-                    <label>Rounding:</label>
-                    <div class="radio-group">
-                        <input type="radio" id="grs" name="rounding" checked>
-                        <label for="grs">G/R/S</label>
-                        <input type="radio" id="standard" name="rounding">
-                        <label for="standard">Standard</label>
-                    </div>
-                </div>
-                <div class="digits">
-                    <label for="digits">Number of digits supported:</label>
-                    <input type="number" id="digits" min="0" required>
-                </div>
-                <div class="go-button">
-                    <button id="go-button">Go</button>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="panel right-panel">
             <div class="step">
