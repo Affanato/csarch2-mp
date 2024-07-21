@@ -24,8 +24,8 @@ def index():
         digits = int(digits)
 
         ## Process
-        solutions = calculator.solve(op1, b1, op2, b2, rounding, digits)
+        solution = calculator.solve(op1, b1, op2, b2, rounding, digits)
 
         ## Output to user
         ## Once
-        return render_template('solution.html', solutions=solutions)
+        return render_template('solution.html', solution=solution)

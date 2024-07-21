@@ -67,17 +67,18 @@ class Calculator:
             print(str(final_rounded) + " x 2 ^ " + str(final_base))
             
             return {
-                "normalized_input_one": normalized_input_one, 
-                "normalized_base_one": normalized_base_one, 
-                "normalized_input_two": normalized_input_two, 
-                "normalized_base_two": normalized_base_two,
-                "GRS_value_one": GRS_value_one, 
-                "normalized_base_one": normalized_base_one, 
-                "GRS_value_two": GRS_value_two, 
-                "normalized_base_two": normalized_base_two, 
-                "final_value": final_value, 
-                "final_base": final_base, 
-                "final_rounded": final_rounded
+                "rounding_method": "G/R/S",
+                "normalized_input_one": str(normalized_input_one), 
+                "normalized_base_one": str(normalized_base_one), 
+                "normalized_input_two": str(normalized_input_two), 
+                "normalized_base_two": str(normalized_base_two),
+                "GRS_value_one": str(GRS_value_one), 
+                "normalized_base_one": str(normalized_base_one), 
+                "GRS_value_two": str(GRS_value_two), 
+                "normalized_base_two": str(normalized_base_two), 
+                "final_value": str(final_value), 
+                "final_base": str(final_base), 
+                "final_rounded": str(final_rounded)
             }
         else:
             value_input_one = binary_to_decimal(normalized_input_one)
@@ -98,19 +99,19 @@ class Calculator:
             print(str(final_rounded) + " x 2 ^ " + str(final_base))
 
             return {
-                "normalized_input_one": normalized_input_one, 
-                "normalized_base_one": normalized_base_one, 
-                "normalized_input_two": normalized_input_two, 
-                "normalized_base_two": normalized_base_two,
-                "value_sum": value_sum, 
-                "normalized_base_one": normalized_base_one, 
-                "final_rounded": final_rounded, 
-                "final_base": final_base,
-                'normalized_input_one': normalized_input_one,
-                'normalized_base_one': normalized_base_one,
-                'normalized_input_two': normalized_input_two,
-                'normalized_base_two': normalized_base_two,
-                'value_sum': value_sum
+                "rounding_method": "Standard",
+                "normalized_input_one": str(normalized_input_one), 
+                "normalized_base_one": str(normalized_base_one), 
+                "normalized_input_two": str(normalized_input_two), 
+                "normalized_base_two": str(normalized_base_two),
+                "value_sum": str(value_sum), 
+                "normalized_base_one": str(normalized_base_one), 
+                "final_rounded": str(final_rounded), 
+                "final_base": str(final_base),
+                'normalized_input_one': str(normalized_input_one),
+                'normalized_base_one': str(normalized_base_one),
+                'normalized_input_two': str(normalized_input_two),
+                'normalized_base_two': str(normalized_base_two)
             }
 
     def __init__(self):
