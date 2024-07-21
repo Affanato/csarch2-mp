@@ -105,7 +105,12 @@ class Calculator:
                 "value_sum": value_sum, 
                 "normalized_base_one": normalized_base_one, 
                 "final_rounded": final_rounded, 
-                "final_base": final_base
+                "final_base": final_base,
+                'normalized_input_one': normalized_input_one,
+                'normalized_base_one': normalized_base_one,
+                'normalized_input_two': normalized_input_two,
+                'normalized_base_two': normalized_base_two,
+                'value_sum': value_sum
             }
 
     def __init__(self):
@@ -127,6 +132,12 @@ def check_binary_digits(number):
 def binary_to_decimal(binary_number):
     # Convert the string input directly to a Decimal
     binary_number = Decimal(binary_number)
+
+    negative = binary_number < 0
+
+    if negative:
+        binary_number *= -1
+
     fractional_part = binary_number % 1
     whole_part = binary_number - fractional_part
 
@@ -154,6 +165,10 @@ def binary_to_decimal(binary_number):
             break
 
     dec = dec_whole + dec_fractional
+
+    if binary_number < 0:
+        dec *= -1
+
     return dec
 
 
