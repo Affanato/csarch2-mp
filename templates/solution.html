@@ -3,60 +3,36 @@
 {% block body %}
 
 <div class="panel right-panel">
-    <h2>print statements from nio's code</h2>
-
-    Normalized Exponents<br>
-    Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}"<br>
-    Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}"<br>
-
-    {% if solution['rounding_method'] == 'G/R/S' %}
-
-    Perform Addition with respect to G/R/S<br>
-    {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}<br>
-    {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}<br>
-    Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}<br>
-
-    Perform Addition<br>
-    {{solution['value_sum']}} x 2 ^ {{solution['normalized_base_one']}}<br>
-    Rounded Final Answer<br>
-    {{solution['final_rounded']}} + " x 2 ^ " + {{solution['final_base']}}<br>
-
-    {% else %}
-
-    Perform Addition<br>
-    {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}<br>
-    + {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}<br>
-    Sum: {{solution['value_sum']}}x 2 ^ {{solution['normalized_base_one']}}<br>
-    Rounded Final Answer<br>
-    {{solution['final_rounded']}} + " x 2 ^ " + {{solution['final_base']}}<br>
-
-    {% endif %}
-
-    <h2>og contents</h2>
     <div class="step">
-        <h2>1. Initial Normalization</h2>
-        <p>...</p>
+        <h2>1. Normalize Exponents</h2>
+        <p id="1">Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="2">Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
     </div>
     <div class="step">
-        <h2>2. Operation</h2>
-        <p>...</p>
+        {% if solution['rounding_method'] == 'G/R/S' %}
+        <h2>2. Perform Addition with Respect to G/R/S</h2>
+        <p id="3">   {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="4">+ {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}<p><p id="5">Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}</p>
+        {% else %}
+        <h2>2. Perform Additon</h2>
+        <p id="6">   {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="7">+ {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p><p if="8">Sum: {{solution['value_sum']}}x 2 ^ {{solution['normalized_base_one']}}</p>
+        {% endif %}
     </div>
     <div class="step">
-        <h2>3. Post-Operation Normalization</h2>
-        <p>...</p>
-    </div>
-    <div class="step">
-        <h2>4. Final Answer</h2>
-        <p>...</p>
+        <h2>3. Rounded Final Answer</h2>
+        <p id="9">{{solution['final_rounded']}} x 2 ^ {{solution['final_base']}}</p>
     </div>
     <div class="solution-buttons">
-        <div class="go-button">
-            <button id="go-button">Save as Txt</button>
+        <div class="save-button">
+            <button id="save-button">Save as TXT</button>
         </div>
         <form action="/" method="get">
             <button id="retry-button" type="submit">Try Again</button>
         </form>
     </div>
 </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 {% endblock %}

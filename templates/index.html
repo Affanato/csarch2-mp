@@ -8,23 +8,25 @@
             <div class="operand">
                 <label for="operand1">Operand 1:</label>
                 <div class="inline-inputs">
-                    <input name="input-1-operand" type="text" id="operand1" placeholder="X" required>
+                    <input name="input-1-operand" type="text" id="operand1" placeholder="X" required pattern="^[01]*(\.[01]+)?$" title="Please enter a valid binary floating point number.">
                     <label for="exp1">2^</label>
                     <input name="input-1-base" type="number" id="exp1" required>
                 </div>
+                <span id="error-message1" style="display: none;">Invalid binary floating point number</span>
             </div>
             <div class="operand">
                 <label for="operand2">Operand 2:</label>
                 <div class="inline-inputs">
-                    <input name="input-2-operand" type="text" id="operand2" placeholder="X" required>
+                    <input name="input-2-operand" type="text" id="operand2" placeholder="X" required pattern="^[01]*(\.[01]+)?$" title="Please enter a valid binary floating point number.">
                     <label for="exp2">2^</label>
                     <input name="input-2-base" type="number" id="exp2" required>
                 </div>
+                <span id="error-message2" style="display: none;">Invalid binary floating point number</span>
             </div>
             <div class="rounding">
                 <label>Rounding:</label>
                 <div class="radio-group">
-                    <input type="radio" name="round" value="G/R/S" id="grs" checked>
+                    <input type="radio" name="round" value="G/R/S" id="grs">
                     <label for="grs">G/R/S</label>
                     <input type="radio" name="round" value="Standard" id="standard">
                     <label for="standard">Standard</label>
@@ -40,4 +42,6 @@
         </div>
     </form>
 </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 {% endblock %}
