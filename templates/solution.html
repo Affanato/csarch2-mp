@@ -4,26 +4,31 @@
 
 <div class="panel right-panel">
     <div class="step">
-        <h2>1. Normalize Exponents</h2>
-        <p id="1">Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
-        <p id="2">Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
+	<h2>1. Inputs</h2>
+        <p id="1">{{inputs['op1']}} x 2 ^ {{inputs['b1']}} + {{inputs['op2']}} x 2 ^ {{inputs['b2']}}</p>
+	<p id="2">Rounding: {{inputs['rounding']}}, {{inputs['digits']}} supported digits</p>
+    </div>
+    <div class="step">
+        <h2>2. Normalize Exponents</h2>
+        <p id="3">Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="4">Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
     </div>
     <div class="step">
         {% if solution['rounding_method'] == 'G/R/S' %}
-        <h2>2. Perform Addition with Respect to G/R/S</h2>
-        <p id="3">   {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
-        <p id="4"> + {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
-        <p id="5">Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}</p>
+        <h2>3. Perform Addition with Respect to G/R/S</h2>
+        <p id="5">   {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="6"> + {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
+        <p id="7">Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}</p>
         {% else %}
-        <h2>2. Perform Additon</h2>
-        <p id="6">      {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
-        <p id="7">   + {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
-        <p id="8">Sum: {{solution['value_sum']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <h2>3. Perform Additon</h2>
+        <p id="8">      {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="9">   + {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
+        <p id="10">Sum: {{solution['value_sum']}} x 2 ^ {{solution['normalized_base_one']}}</p>
         {% endif %}
     </div>
     <div class="step">
-        <h2>3. Rounded Final Answer</h2>
-        <p id="9">{{solution['final_rounded']}} x 2 ^ {{solution['final_base']}}</p>
+        <h2>4. Rounded Final Answer</h2>
+        <p id="11">{{solution['final_rounded']}} x 2 ^ {{solution['final_base']}}</p>
     </div>
     <div class="solution-buttons">
         <div class="save-button">

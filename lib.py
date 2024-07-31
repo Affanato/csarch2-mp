@@ -167,7 +167,7 @@ def binary_to_decimal(binary_number):
 
     dec = dec_whole + dec_fractional
 
-    if binary_number < 0:
+    if negative:
         dec *= -1
 
     return dec

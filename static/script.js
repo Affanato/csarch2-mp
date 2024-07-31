@@ -1,25 +1,30 @@
 document.getElementById('save-button').addEventListener('click', function() {
     let content = '';
-    // Append the normalized exponents
-    content += '1. Normalize Exponents\n';
+    
+    content += '1. Inputs\n';
     content += document.getElementById('1').innerText + '\n';
-    content += document.getElementById('2').innerText + '\n';
+    content += document.getElementById('2').innerText + '\n\n';
+
+    // Append the normalized exponents
+    content += '2. Normalize Exponents\n';
+    content += document.getElementById('3').innerText + '\n';
+    content += document.getElementById('4').innerText + '\n';
 
     // Check if the GRS section should be included
-    if (document.getElementById('3')) {
-        content += '\n2. Perform Addition with Respect to G/R/S\n';
-        content += document.getElementById('3').innerText + '\n';
-        content += document.getElementById('4').innerText + '\n';
+    if (document.getElementById('5')) {
+        content += '\n3. Perform Addition with Respect to G/R/S\n';
         content += document.getElementById('5').innerText + '\n';
-    } else {
-        content += '\n2. Perform Addition\n';
         content += document.getElementById('6').innerText + '\n';
         content += document.getElementById('7').innerText + '\n';
+    } else {
+        content += '\n3. Perform Addition\n';
         content += document.getElementById('8').innerText + '\n';
+        content += document.getElementById('9').innerText + '\n';
+        content += document.getElementById('10').innerText + '\n';
     }
 
-    content += '\n3. Rounded Final Answer\n';
-    content += document.getElementById('9').innerText + '\n';
+    content += '\n4. Rounded Final Answer\n';
+    content += document.getElementById('11').innerText + '\n';
 
     // Create a blob with the content and type set to text/plain
     const blob = new Blob([content], { type: 'text/plain' });
