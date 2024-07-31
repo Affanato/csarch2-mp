@@ -7,20 +7,18 @@
         <h2>1. Normalize Exponents</h2>
         <p id="1">Normalized First Input: {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}
         </p>
-        <p id="2">Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^
-            {{solution['normalized_base_two']}}</p>
+        <p id="2">Normalized Second Input: {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
     </div>
     <div class="step">
         {% if solution['rounding_method'] == 'G/R/S' %}
         <h2>2. Perform Addition with Respect to G/R/S</h2>
-        <p id="3"> {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
-        <p id="4">+ {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}
-        <p>
+        <p id="3">   {{solution['GRS_value_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="4"> + {{solution['GRS_value_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
         <p id="5">Sum: {{solution['final_value']}} x 2 ^ {{solution['final_base']}}</p>
         {% else %}
         <h2>2. Perform Additon</h2>
-        <p id="6"> {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
-        <p id="7">+ {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
+        <p id="6">     {{solution['normalized_input_one']}} x 2 ^ {{solution['normalized_base_one']}}</p>
+        <p id="7">   + {{solution['normalized_input_two']}} x 2 ^ {{solution['normalized_base_two']}}</p>
         <p id="8">Sum: {{solution['value_sum']}} x 2 ^ {{solution['normalized_base_one']}}</p>
         {% endif %}
     </div>
