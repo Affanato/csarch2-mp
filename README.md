@@ -1,6 +1,6 @@
 # IEEE-754 binary32 Floating Point Addition Calculator
+### CSARCH2 Simulation Project
 
-CSARCH2 Simulation Project
 CSARCH2 S14 Group 1
 
 - Ishikawa, Andrew Hiro C.
@@ -8,9 +8,9 @@ CSARCH2 S14 Group 1
 - Soriano, John Angelo S.
 - Tujan, Lucas Antonio F.
 
-## Live Demo
-
-[https://csarch2-mp-s14-g1.onrender.com/](https://csarch2-mp-s14-g1.onrender.com/)
+[🔗 Live Site](https://csarch2-mp-s14-g1.onrender.com/) | 
+[📝 Documentation](https://docs.google.com/document/d/1NS-gPQXEGyv6ISZFPs5UAlhhF8Q5fMe8CLrKlNL52xk/) | 
+[▶️ Demo](https://www.youtube.com/watch?v=rKlSDuEJ)
 
 ## Setup
 
