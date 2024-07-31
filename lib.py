@@ -269,7 +269,7 @@ def normalize_exponents(num1, base1, num2, base2, max_decimals):
     new_num2 = d2 * (Decimal(10) ** -offset2)
 
     # Ensure the precision for fractional parts
-    precision = max(max_decimals, abs(offset1), abs(offset2))
+    precision = max(max_decimals + abs(offset1), max_decimals + abs(offset2))
     new_num1 = new_num1.quantize(Decimal('1e-{0}'.format(precision)))
     new_num2 = new_num2.quantize(Decimal('1e-{0}'.format(precision)))
 
