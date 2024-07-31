@@ -52,7 +52,7 @@ document.getElementById('operand1').addEventListener('input', function(event) {
     const inputField = event.target;
     const errorMessage = document.getElementById('error-message1');
     const value = inputField.value;
-    const binaryFloatPattern = /^-?[01]*(\.[01]+)?$/;
+    const binaryFloatPattern = /^-?[01]{1,25}(\.[01]{1,24})?$/;
 
     if (binaryFloatPattern.test(value)) {
         // Valid binary floating point number
@@ -69,7 +69,7 @@ document.getElementById('operand2').addEventListener('input', function(event) {
     const inputField = event.target;
     const errorMessage = document.getElementById('error-message2');
     const value = inputField.value;
-    const binaryFloatPattern = /^-?[01]*(\.[01]+)?$/;
+    const binaryFloatPattern = /^-?[01]{1,25}(\.[01]{1,24})?$/;
 
     if (binaryFloatPattern.test(value)) {
         // Valid binary floating point number
