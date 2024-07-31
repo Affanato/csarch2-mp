@@ -47,7 +47,7 @@ document.getElementById('operand1').addEventListener('input', function(event) {
     const inputField = event.target;
     const errorMessage = document.getElementById('error-message1');
     const value = inputField.value;
-    const binaryFloatPattern = /^[01]*(\.[01]+)?$/;
+    const binaryFloatPattern = /^-?[01]*(\.[01]+)?$/;
 
     if (binaryFloatPattern.test(value)) {
         // Valid binary floating point number
