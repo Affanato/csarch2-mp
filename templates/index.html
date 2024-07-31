@@ -12,7 +12,7 @@
                         pattern="^-?[01]{1,25}(\.[01]{1,24})?$" maxlength="27"
                         title="Please enter a valid binary floating point number.">
                     <label for="exp1">2^</label>
-                    <input name="input-1-base" type="number" id="exp1" required>
+                    <input name="input-1-base" type="number" id="exp1" min="-126" max="127" required>
                 </div>
                 <span id="error-message1" style="display: none;">Invalid binary floating point number</span>
             </div>
@@ -23,7 +23,7 @@
                         pattern="^-?[01]{1,25}(\.[01]{1,24})?$" maxlength="27"
                         title="Please enter a valid binary floating point number.">
                     <label for="exp2">2^</label>
-                    <input name="input-2-base" type="number" id="exp2" required>
+                    <input name="input-2-base" type="number" id="exp2" min="-126" max="127" required>
                 </div>
                 <span id="error-message2" style="display: none;">Invalid binary floating point number</span>
             </div>
