@@ -10,7 +10,7 @@ CSARCH2 S14 Group 1
 
 [🔗 Live Site](https://csarch2-mp-s14-g1.onrender.com/) | 
 [📝 Documentation](https://docs.google.com/document/d/1NS-gPQXEGyv6ISZFPs5UAlhhF8Q5fMe8CLrKlNL52xk/) | 
-[▶️ Demo](https://www.youtube.com/watch?v=rKlSDuEJ)
+[▶️ Demo](https://youtu.be/rKlSDuEJ_Q0?si=T6hZIwPIPRhaKSVy)
 
 ## Setup
 
